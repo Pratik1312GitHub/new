@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Asma!</title>
+  <style>
+    body {
+      background-color: pink;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff4081;
+    }
+    p {
+      font-size: 1.5em;
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
+    .signature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .signature img {
+      width: 40px;
+      height: 40px;
+    }
+    .cake {
+      width: 300px;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 2;
+    }
+    .cut-btn {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+      position: relative;
+      z-index: 2;
+    }
+    .cut-btn:hover {
+      background-color: #ff1493;
+    }
+    .media-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+    .media-gallery img {
+      max-width: 200px;
+      margin: 15px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .media-gallery img:nth-child(odd) {
+      transform: rotate(-5deg);
+    }
+    .media-gallery img:nth-child(even) {
+      transform: rotate(5deg);
+    }
+    .media-gallery img:hover {
+      transform: scale(1.05);
+    }
+    video {
+      width: 39%;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+    .farewell-message {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-top: 40px;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday Asma! 🎉</h1>
+  <p>Dear Asma,<br><br>
+  Wishing you the most amazing birthday ever! May your day be filled with love, joy, and laughter. 💖 You are one of my bestest friends, and I’m lucky to have you in my life! 😊 Couldn't send you any gift this time, so coded this small gift huhu.. Enjoy your special day! 🎂🥳</p>
+
+  <div class="signature">
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/BI11.png" alt="Decor1">
+    <span style="font-size: 1.5em;">- Pratik 💕</span>
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/BI22.png" alt="Decor2">
+  </div>
+
+  <img id="cakeImage" class="cake" src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/cake.jpg" alt="Birthday Cake">
+
+  <br>
+  <button class="cut-btn" onclick="cutTheCake()">🎂 Cut the Cake 🎶</button>
+
+  <audio id="birthdaySong" src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/birthday.mp3"></audio>
+
+  <div class="media-gallery">
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/IMG_20220912_164307.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/IMG_20221127_173005.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/IMG-20220504-WA0013.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/IMG_20220831_163931_Bokeh.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/Snapchat-972128624.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/Snapchat-1885750779.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/IMG-20221213-WA0075.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/IMG-20221213-WA0091.jpg" />
+    <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/IMG-20230117-WA0007.jpg" />
+  </div>
+
+  <video controls playsinline>
+    <source src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/Snapchat-484102159.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="farewell-message">
+    Best of luck for your futuriii ,and come back huhh!!
+  </div>
+
+  <br><br>
+  <img src="https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/amazon.jpg" style="width:250px; margin-top:20px;">
+  <p style="font-size: 1.3em; margin-top: 10px; font-weight: bold;">AMAZON INDIA REDEEM CODE SV85-5EPCPV-T33</p>
+
+  <script>
+    function cutTheCake() {
+      const cakeImage = document.getElementById('cakeImage');
+      const song = document.getElementById('birthdaySong');
+      cakeImage.src = 'https://raw.githubusercontent.com/Pratik1312GitHub/HBD/main/uncutcake.jpg';
+      song.play();
+    }
+  </script>
+</body>
+</html>
